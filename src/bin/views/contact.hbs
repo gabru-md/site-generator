@@ -1,0 +1,15 @@
+<!-- This page contains the name of the Fest organisers along with their contact information -->
+
+<h2>{{contact.message}}</h2>
+
+{{#each contact.contacts}}
+    <ul>
+        <li>{{this.name}}</li>
+        <li>{{this.position}}</li>
+        <li>{{this.email}}</li>
+        <li>{{this.mobile}}</li>
+    </ul>
+{{/each}}
+
+<h4>{{contact.college.name}} &copy {{contact.college.year}}</h4>
+<p>{{contact.college.address}}</p>

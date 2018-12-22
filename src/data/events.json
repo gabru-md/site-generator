@@ -7,6 +7,7 @@
             "form" : "event 1 reg form link",
             "desc" : "event 1 description",
             "link" : "event-1-link",
+            "image" : "hardysandhu.jpg",
             "rules" : ["comma", "separated", "rules", "if", "any"],
             "heads" : [
                 {
@@ -28,6 +29,7 @@
             "form" : "event 2 reg form link",
             "desc" : "event 2 description",
             "link" : "event-2-link",
+            "image" : "exact name of the image with extension",
             "rules" : ["leave", "this", "array", "empty", "if none"],
             "heads" : [
                 {

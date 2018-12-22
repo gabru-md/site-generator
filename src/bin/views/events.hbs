@@ -1,6 +1,9 @@
+<!-- This page contains all the events -->
+
 <ul>
     {{#each events}}
         <li>{{this.name}}</li>
         <li>{{this.date}}</li>
+        <li><a href="/events/{{ this.link }}">Open Event</a></li>
     {{/each}}
 </ul>

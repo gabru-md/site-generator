@@ -24,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes.home);
 app.use('/events', routes.events);
+app.use('/contact', routes.contact);
+app.get('/*', (req, res, next) => {
+  res.render('404');
+})
 
 
 app.listen(8080, () => {

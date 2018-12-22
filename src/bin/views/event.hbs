@@ -1,0 +1,23 @@
+<!-- This is a single event page -->
+
+<h1>{{ event.name }}</h1>
+<h2>{{ event.date }}</h2>
+<h3>{{ event.time }}</h2>
+<p>{{ event.desc }}</p>
+<a href="{{ event.form }}">Register</a>
+{{#if event.rules.length}}
+    <h3>Rules</h3>
+    {{#each event.rules}}
+    <ul>
+        <li>{{this}}</li>
+    </ul>
+    {{/each}}
+{{/if}}
+<h2>Organisers<h2>
+{{#each event.heads}}
+    <h4>{{this.name}}</h4>
+    <h4>{{this.contact}}</h4>
+    <p>{{this.email}}</p>
+{{/each}}
+
+<img src="/images/{{ event.image }}" height=200 width=200></img>
