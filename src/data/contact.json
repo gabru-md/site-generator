@@ -1,0 +1,22 @@
+{
+    "contacts" : [
+        {
+            "name" : "Manish Devgan",
+            "position" : "Convener",
+            "email" : "manish.nsit8@gmail.com",
+            "mobile" : "+91-9873770098"
+        },
+        {
+            "name" : "Manish Devgan",
+            "position" : "Convener",
+            "email" : "manish.nsit8@gmail.com",
+            "mobile" : "+91-9873770098"
+        }
+    ],
+    "college" : {
+        "name" : "NSUT",
+        "address" : "Dwarka Sector-3, Delhi 110078",
+        "year" : "2019"
+    },
+    "message" : "Contact us here!"
+}

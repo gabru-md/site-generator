@@ -1,0 +1,10 @@
+{
+    "data" : {
+        "title" : "Extravaganza",
+        "name" : "fest name",
+        "dates" : "fest dates",
+        "year" : "year",
+        "college" : "college name",
+        "address" : "address"
+    }
+}

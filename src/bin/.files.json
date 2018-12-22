@@ -1,0 +1,5 @@
+{
+    "contact" : "../data/contact.json",
+    "events" : "../data/events.json",
+    "home" : "../data/home.json"
+}

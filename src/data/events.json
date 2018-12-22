@@ -1,0 +1,46 @@
+{
+    "events" : [
+        {
+            "name" : "event 1 name",
+            "date" : "event 1 date",
+            "time" : "event 1 time",
+            "form" : "event 1 reg form link",
+            "desc" : "event 1 description",
+            "link" : "event-1-link",
+            "rules" : ["comma", "separated", "rules", "if", "any"],
+            "heads" : [
+                {
+                    "name" : "head 1 name",
+                    "contact" : "head 1 contact",
+                    "email" : "head 1 email"
+                },
+                {
+                    "name" : "head 2 name",
+                    "contact" : "head 2 contact",
+                    "email" : "head 2 email"
+                }
+            ]
+        },
+        {
+            "name" : "event 2 name",
+            "date" : "event 2 date",
+            "time" : "event 2 time",
+            "form" : "event 2 reg form link",
+            "desc" : "event 2 description",
+            "link" : "event-2-link",
+            "rules" : ["leave", "this", "array", "empty", "if none"],
+            "heads" : [
+                {
+                    "name" : "head 1 name",
+                    "contact" : "head 1 contact",
+                    "email" : "head 1 email"
+                },
+                {
+                    "name" : "head 2 name",
+                    "contact" : "head 2 contact",
+                    "email" : "head 2 email"
+                }
+            ]
+        }        
+    ]
+}
