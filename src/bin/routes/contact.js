@@ -11,7 +11,9 @@ const _contact = JSON.parse(
 router.use('/', (req, res, next) => {
   res.render('contact',
   {
-    contact : _contact
+    contact : _contact,
+    style : 'contact.css',
+    js : 'contact.js'
   }
   );
 });

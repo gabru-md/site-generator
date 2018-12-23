@@ -21,7 +21,9 @@ const searchEvent = (eventname) => new Promise( (resolve, reject) => {
 router.get('/', (req, res, next) => {
   res.render('events',
     {
-      events : _events
+      events : _events,
+      style : 'events.css',
+      js : 'events.js'
     }
   );
 })
@@ -33,7 +35,9 @@ router.get('/:eventname', (req, res, next) => {
       console.log(event);
       res.render('event', 
         {
-          event : event
+          event : event,
+          style : 'event.css',
+          js : 'event.js'
         }
       );
     })

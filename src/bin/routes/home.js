@@ -11,7 +11,9 @@ const _data = JSON.parse(
 router.get('/', (req, res, next) => {
   res.render('index',
     {
-      data : _data
+      data : _data,
+      style : 'style.css',
+      js : 'home.js'
     }
   );
 });
