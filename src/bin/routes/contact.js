@@ -13,7 +13,8 @@ router.use('/', (req, res, next) => {
   {
     contact : _contact,
     style : 'contact.css',
-    js : 'contact.js'
+    js : 'contact.js',
+    title : 'Contact | Moksha'
   }
   );
 });

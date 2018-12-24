@@ -1,19 +1,46 @@
-<div class="halo"></div>
-<div class="halo-margin">
-  <span class="intro intro--the">Dilli's</span>
-  <span class="intro intro--num">no. #1</span>
-  <span class="intro">retro extravaganza</span>
-</div>
-<div class="vintage__container">
-  <p class="vintage vintage__top">{{data.name}}</p>
-  <p class="vintage vintage__bot">{{data.name}}</p>
-</div>
-<div>
-  <span class="outro"></span>
-  <span class="outro outro--big">{{data.college}}</span>
-  <span class="outro"></span>
-  <span class="outro outro--smart">{{data.address}}</span>
-</div>
-<div>
-  <span class="intro-no">{{data.dates}}</span>
+<div class="container">
+    <div class="row">
+        <div id="main-div" class="col s12">
+            <div class="halo-margin">
+              <span class="intro intro--the animate-flicker">Dilli's</span>
+              <span class="intro intro--num animate-flicker">no. #1</span>
+              <span class="intro animate-flicker">retro extravaganza</span>
+            </div>
+            <div class="vintage__container">
+              <p class="vintage vintage__top">{{data.name}}</p>
+              <p class="vintage vintage__bot">{{data.name}}</p>
+            </div>
+            <div>
+              <span class="outro"></span>
+              <span class="outro outro--big">{{data.college}}</span>
+              <span class="outro"></span>
+              <span class="outro outro--smart">{{data.address}}</span>
+            </div>
+            <div>
+              <span class="intro-no">{{data.dates}}</span>
+            </div>
+        </div>
+    <!--
+        <div id="sub-div" class="col s12">
+            <div class="vintage__container">
+              <p class="vintage vintage__top">Contact</p>
+              <p class="vintage vintage__bot">Contact</p>
+            </div>
+            <div class="vintage__container">
+              <p class="vintage vintage__top">Events</p>
+              <p class="vintage vintage__bot">Events</p>
+            </div>
+        </div>
+        <div class="col s2 offset-s10" id="menu-div">
+            <a class="waves-effect waves-light btn-small menu"><i class="material-icons">menu</i></a>
+        </div>
+    -->
+        <div class="col s12">
+            <div class="vintage__container">
+              <p id="countdown1" class="vintage vintage__top countdown"></p>
+              <p id="countdown2" class="vintage vintage__bot countdown"></p>
+            </div>
+        </div>
+
+    </div>
 </div>

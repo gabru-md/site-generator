@@ -13,7 +13,8 @@ router.get('/', (req, res, next) => {
     {
       data : _data,
       style : 'style.css',
-      js : 'home.js'
+      js : 'home.js',
+      title : 'MOKSHA | Extravaganza'
     }
   );
 });

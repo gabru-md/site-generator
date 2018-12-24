@@ -1,3 +1,6 @@
+/*
+CSS Here
+*/
 @import url(https://fonts.googleapis.com/css?family=Satisfy); 
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
@@ -115,4 +118,50 @@ body {
 
 .outro--smart {
   display: block;
+}
+
+
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation .7s infinite;
+   -moz-animation: flickerAnimation .7s infinite;
+   -o-animation: flickerAnimation .7s infinite;
+    animation: flickerAnimation .7s infinite;
+}
+
+
+/*
+Addons here
+*/
+
+.menu {
+  top: 5vh;
+  right: 5vh;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+}
+
+.countdown {
+  font-size: 100px;
 }

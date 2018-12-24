@@ -23,7 +23,8 @@ router.get('/', (req, res, next) => {
     {
       events : _events,
       style : 'events.css',
-      js : 'events.js'
+      js : 'events.js',
+      title : 'Events | Moksha'
     }
   );
 })
@@ -37,7 +38,8 @@ router.get('/:eventname', (req, res, next) => {
         {
           event : event,
           style : 'event.css',
-          js : 'event.js'
+          js : 'event.js',
+          title : event.name
         }
       );
     })
