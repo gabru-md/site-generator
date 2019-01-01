@@ -1,5 +1,66 @@
-<form action="/events/add_event" method="POST">
-    <input type="text" name="desc" id="desc"/>
-    <!-- Add more fields here -->
-    <button type="submit">Add Event</button>
-</form>
+<div class="container" style="width:70%">
+    <h1>Add a new event</h1>
+    <div class="row">
+        <form action="/events/add_event" method="POST"enctype="multipart/form-data">
+            <div class="input-field col s12">
+                <label>Event Name</label>
+                <input type="text" name="name" placeholder="Event Name"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Date</label>
+                <input type="text" name="date" placeholder="Event Date"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Time</label>
+                <input type="text" name="time" placeholder="Event Time"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Registration Form Link</label>
+                <input type="text" name="form" placeholder="Event Registration Form Link / Google Docs Link"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Description</label>
+                <input type="text" name="desc" placeholder="Event Description"/>
+            </div>
+            <div class="input-field col s12">
+                <div class="row">
+                    <div class="col s6">
+                        <label>Event Image (Single Image for the event)</label>
+                    </div>
+                    <div class="col s6">
+                        <input type="file" name="image" multiple/>
+                    </div>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Rule 1</label>
+                <input type="text" name="rule_1" placeholder="Event Rule 1 (if it exists, same for the rest of rules"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Rule 2</label>
+                <input type="text" name="rule_2" placeholder="Event Rule 2"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Rule 3</label>
+                <input type="text" name="rule_3" placeholder="Event Rule 3"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Rule 4</label>
+                <input type="text" name="rule_4" placeholder="Event Rule 4"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Head Name</label>
+                <input type="text" name="head_name" placeholder="Event Head Name"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Head Contact</label>
+                <input type="text" name="head_contact" placeholder="Contact number of the event head"/>
+            </div>
+            <div class="input-field col s12">
+                <label>Event Head Email</label>
+                <input type="text" name="head_email" placeholder="Event head email"/>
+            </div>
+            <!-- Add more fields here -->
+            <button type="submit">Add Event</button>
+        </form>
+</div>

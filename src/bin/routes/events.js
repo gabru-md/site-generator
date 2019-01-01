@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const formidable = require('formidable');
 const _dataPath = path.join(__dirname,'../../data/events.json');
 var router = express.Router();
 
@@ -15,20 +16,26 @@ const searchEvent = (eventname) => new Promise( (resolve, reject) => {
   reject('Event not found');
 });
 
-const createEvent = (_data) => new Promise( (resolve, reject) => {
+const createEvent = (_data, _files) => new Promise( (resolve, reject) => {
   var event = {};
+  event.rules = [];
+  event.heads = [{}];
   for (key in _data) {
-    if( _data[key].constructor === Array) {
-      continue;
+    console.log(key);
+    if(key.split('_')[0] === 'rule') {
+      event.rules.push(_data[key]);
     }
-
-    if( ((_data[key].constructor === String) || (__data[key].constructor === Object))
-        && (! _data[key])) {
-      reject('Not enough Data');
+    else {
+      if( key.split('_')[0] === 'head') {
+        event.heads[0][key.split('_')[1]] = _data[key];
+      }
+      else {
+        event[key] = _data[key];
+      }
     }
-
-    event[key] = _data[key];
   }
+  event.image = _files.image.name;
+  event.link = event.name.split(' ').join('-');
 
   resolve(event);
 });
@@ -74,7 +81,26 @@ router.post('/add_event', (req, res, next) => {
   _data = JSON.parse(
     fs.readFileSync(_dataPath));
 
-  createEvent(req.body)
+
+  var form = new formidable.IncomingForm();
+  form.parse(req, function (err, fields, files) {
+    var oldpath = files.image.path;
+    var newpath = path.resolve('src/bin/public/images', files.image.name);
+    fs.readFile(oldpath, function (err, data) {
+      if (err) throw err;
+
+      fs.writeFile(newpath, data, function (err) {
+          if (err) throw err;
+      });
+
+      // Delete the file
+      fs.unlink(oldpath, function (err) {
+          if (err) throw err;
+      });
+    });
+    console.log(fields);
+
+    createEvent(fields, files)
     .then((event) => {
       saveEvent(_data, event)
         .then((msg) => {
@@ -90,6 +116,7 @@ router.post('/add_event', (req, res, next) => {
       console.log(err);
       res.send('Incomplete Data');
     });
+  });
 });
 
 

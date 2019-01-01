@@ -23,9 +23,10 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
+    "formidable": "^1.2.1",
     "serve-favicon": "^2.5.0"
   },
-    "engines": {
+  "engines": {
     "node": "8.x"
   }
 }
