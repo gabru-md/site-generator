@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("_" + destination.anchor).style.color = "white";
       document.getElementById("_" + destination.anchor).style.borderBottomColor = "white";
       document.getElementsByClassName("nav").focus = "auto";
-    }
+    },
+    scrollOverflow: true,
+    scrollBar: true
   });
 });
 
@@ -25,14 +27,11 @@ var countDown = setInterval(function () {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   $('#countdown1').html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
-  $('#countdown2').html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
 
   if (distance < 0) {
     clearInterval(countDown);
     $('#countdown1').html('wait is over');
-    $('#countdown2').html('wait is over');
   }
-  console.log(now);
 }, 1000);
 
 let x = 0;
