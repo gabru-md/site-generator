@@ -5,11 +5,37 @@ CSS Here
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
 body {
-  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=15424fff&noise=166f9e&density=100&opacity=61);
+  background-image: url('/images/black_background.png');
   text-align: center;
+  background-repeat:repeat-y;
+  background-size:cover;
+  background-position:center;
 }
 
-.halo {
+.images {
+  height: 100%;
+  width: 100%;
+}
+
+
+.stars, .delhi, .ribbon_text, .crown, .moksha, .est, .nsut{
+  text-align: middle;
+  width: 30%;
+}
+
+.crown {
+  height: 40px;
+  width: 40px;
+}
+
+
+.stars {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* .halo {
   background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6));
   bottom: 0;
   left: 0;
@@ -150,9 +176,7 @@ body {
 }
 
 
-/*
 Addons here
-*/
 
 .menu {
   top: 5vh;
@@ -164,4 +188,4 @@ Addons here
 
 .countdown {
   font-size: 100px;
-}
+} */

@@ -52,6 +52,23 @@ const saveEvent = (_data, event) => new Promise( (resolve, reject) => {
 });
 
 
+const editEvent = (_data, eventlink, event) =>  new Promise( (resolve, reject) => {
+  for (var i = _data.events.length - 1; i >= 0; i--) {
+    if(_data.events[i].link === eventlink) {
+      _data.events[i] = event;
+    }
+  }
+
+  fs.writeFile(_dataPath, JSON.stringify(_data, null, 4), (err) => {
+    if(err){
+      console.log(err);
+      reject(err);
+    }
+    resolve('File Saved');
+  })
+});
+
+
 router.get('/', (req, res, next) => {
   _data = JSON.parse(
   fs.readFileSync(_dataPath));
@@ -117,6 +134,23 @@ router.post('/add_event', (req, res, next) => {
       res.send('Incomplete Data');
     });
   });
+});
+
+
+router.patch('/:eventlink', (req, res, next) => {
+  _data = JSON.parse(
+    fs.readFileSync(_dataPath));
+  _events = _data.events;
+  const eventlink = req.params.eventlink;
+  editEvent(_data, eventlink, eventData)
+  .then((msg) => {
+    console.log(msg);
+    res.render('Done Editing');
+  })
+  .catch((err) => {
+    console.log(err);
+    res.render('Some Error Occured');
+  })
 });
 
 

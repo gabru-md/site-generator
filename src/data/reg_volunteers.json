@@ -1,0 +1,32 @@
+{
+    "forms": [
+        {
+            "department" : "Public Relations",
+            "form_link" : ""
+        },
+        {
+            "department" : "Event Management",
+            "form_link" : ""
+        },
+        {
+            "department" : "Designing",
+            "form_link" : ""
+        },
+        {
+            "department" : "Videography",
+            "form_link" : ""
+        },
+        {
+            "department" : "Content Writing",
+            "form_link" : ""
+        },
+        {
+            "department" : "Logistics",
+            "form_link" : ""
+        },
+        {
+            "department" : "Security",
+            "form_link" : ""
+        }
+    ]
+}

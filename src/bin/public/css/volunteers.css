@@ -1,0 +1,73 @@
+body {
+  background: url('/images/black background.png');
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  color: white;
+}
+
+.container {
+  width: 100%;
+}
+
+div {
+  text-align: center;
+}
+
+
+span {
+  position: relative;
+  font-size: 3vw;
+  top: 45%;
+  left: 0;
+  right: 0;
+  color: black !important;
+}
+
+
+.row {
+  margin-top: 30px;
+}
+
+ .outer-div {
+  margin-top: 4px;
+  height: 30vw;
+  overflow: hidden; 
+  vertical-align: middle;
+}
+
+.inner-div {
+  height: 100%;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+  vertical-align: middle;
+}
+
+a:nth-child(3n+1) > .col > .outer-div > .inner-div {
+  background: url('https://previews.123rf.com/images/apostrophe/apostrophe1504/apostrophe150400069/38994882-faded-blue-and-white-striped-background-angled-or-diagonal-line-pattern.jpg');
+}
+
+a:nth-child(3n+2) > .col > .outer-div > .inner-div {
+  background: url('https://previews.123rf.com/images/apostrophe/apostrophe1502/apostrophe150200039/36595528-dull-faded-green-background-with-white-angled-blocks-and-stripes-in-abstract-pattern-with-vintage-sc.jpg');
+}
+
+a:nth-child(3n+3) > .col > .outer-div > .inner-div {
+  background: url('https://previews.123rf.com/images/apostrophe/apostrophe1501/apostrophe150100086/35834883-faded-sky-blue-background-vintage-texture-and-faded-white-color-sponged-distressed-texture-in-soft-b.jpg');
+}
+
+
+.outer-div:hover > .inner-div {
+  transform: scale(1.1);
+}
+
+
+a {
+  text-decoration: none;
+  text-underline-position: none;
+  text-decoration-style: none;
+  color: white;
+}

@@ -1,0 +1,18 @@
+    <div class="row">
+        <div class="col s12 m12">
+            <h5>Volunteers Register</h5>
+        </div>
+    </div>
+    <div class="row">
+        {{#each data}}
+            <a href='{{this.form_link}}'>
+                <div class="col s12 m6">
+                    <div class="outer-div">
+                        <div class="inner-div">
+                            <span>{{this.department}}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {{/each}}
+    </div>
