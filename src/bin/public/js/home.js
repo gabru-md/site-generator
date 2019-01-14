@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("_" + destination.anchor).style.color = "white";
       document.getElementById("_" + destination.anchor).style.borderBottomColor = "white";
       document.getElementsByClassName("nav").focus = "auto";
-    },
-    scrollOverflow: true,
-    scrollBar: true
+    }
   });
 });
 
