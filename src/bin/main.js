@@ -13,22 +13,23 @@ app.engine('hbs', hbs(
   {
     extname: 'hbs',
     defaultLayout: 'layout',
-    layoutsDir: path.join(__dirname, '/views/layouts')}
-  )
+    layoutsDir: path.join(__dirname, '/views/layouts')
+  }
+)
 );
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'hbs');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes.home);
 app.use('/events', routes.events);
 app.use('/contact', routes.contact);
 app.use('/reg', routes.volunteers);
-app.get('/*', (req, res, next) => {
-  res.render('404');
-})
+// app.get('/*', (req, res, next) => {
+//   res.render('404');
+// })
 
 
 app.listen(process.env.PORT || 4000, () => {
