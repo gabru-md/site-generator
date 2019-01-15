@@ -36,7 +36,7 @@
 
 .logo3{
   position: absolute;
-  max-height: 3vh;
+  max-height: 2vh;
   top: 80%;
   left:50%;
   transform: translate(-50%, 0%);
@@ -111,6 +111,7 @@ a:hover{
 .navcss{
   position: fixed;
   right: 5%;
+  top: 5%;
 }
 
 #countdown1{
@@ -119,5 +120,5 @@ a:hover{
   left:50%;
   transform: translate(-50%);
   font-family: 'ZingRustD2Demo-Base';
-  font-size: 3vh;
+  font-size: 5vh;
 }
